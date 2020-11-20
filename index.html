@@ -9,5 +9,45 @@
 </head>
 <body>
     
+    <header>
+        <div class="header-top">
+            <img src="img/logo.jpg" alt="Logo">
+            <h1 class="sr-only">Logo Name</h1>
+            <button>Menu</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"Articles></a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Memberships</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- search bar -->
+        <form action="#" method="get" role="search">
+            <label for="searchbar" class="sr-only">Search</label>
+            <input id="searchbar" type="text" placeholder="Search">
+        </form>
+    </header>
+
+    <section>
+        <h2>Log In</h2>
+        <form class="login-form" action="#" method="post">
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" required autocomplete="off" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Min of 8 characters, uppercase, lowercase, and number required.">
+            </div>
+            <div>
+                <input type="submit" value="Sign In">
+            </div>
+        </form>
+    </section>
+
 </body>
 </html>

@@ -1,0 +1,141 @@
+:root {
+    --cream: #e5e1db;
+    --yellow: #cfb450;
+    --grey: #6b6267;
+    --lt-grey: #d2cfd1;
+}
+
+body {
+    font-family: Arial Narrow,Arial, sans-serif;
+}
+
+header {
+    background-color: var(--cream);
+    padding: 0 1rem;
+}
+
+nav {
+    display: none;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[id=searchbar] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-image: url('../img/magnifying-glass.svg');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center left 5px;
+    padding-left: 40px;
+}
+
+.login-form {
+    border: 1px solid var(--lt-grey);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px var(--lt-grey);
+}
+
+.login-form label {
+    display: block;
+}
+
+.login-form > div {
+    margin-bottom: 0.75rem;
+}
+
+input[id=email],
+input[id=password] {
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--lt-grey);
+}
+
+input[type=submit] {
+    background-color: var(--yellow);
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--yellow);
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid var(--yellow);
+}
+
+*:focus {
+    outline: none;
+}
+
+.login-form input[id=email]:invalid,
+.login-form input[id=password]:invalid {
+    outline: 2px solid tomato;
+}
+
+.login-form input[id=email]:valid,
+.login-form input[id=password]:valid {
+    outline: 2px solid green;
+}
+
+/*Utility classes*/
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+button {
+    background-color: var(--grey);
+    color: var(--cream);
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/*Large screen*/
+@media only screen and (min-width: 600px){
+    head {
+        justify-content: space-around;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 1rem;
+    }
+
+    nav ul li a {
+        color: var(--yellow);
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        color: blue;
+    }
+
+    button {
+        display: none;
+    }
+}
